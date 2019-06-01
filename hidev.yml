@@ -1,0 +1,25 @@
+package:
+  type: project
+  name: codexten/yii-ci-starter
+  title: 'Project Template'
+  keywords: 'project, template'
+vendor:
+  name: eii
+  authors:
+    jomon:
+      name: 'jomon@entero.in'
+      email: 'Jomon Johnson'
+#nginx:
+#  fpmSocket: php-fpm
+#  giventake.yii:
+#    ips: '0.0.0.0:80'
+#    domain: giventake.yii
+#    webDir: /project/giventake/giventake-master/public/member
+#  admin.giventake.yii:
+#    ips: '0.0.0.0:80'
+#    domain: admin.giventake.yii
+#    webDir: /project/giventake/giventake-master/public/admin
+#  s.giventake.yii:
+#    ips: '0.0.0.0:80'
+#    domain: s.giventake.yii
+#    webDir: /project/giventake/giventake-master/public/storage

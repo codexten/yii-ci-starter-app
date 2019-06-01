@@ -1,0 +1,6 @@
+nginx:
+  fpmSocket: php-fpm
+  gnt.yii:
+    ips: '0.0.0.0:80'
+    domain: yii.starter.ci
+    webDir: /projects/yii-cii-starter-app

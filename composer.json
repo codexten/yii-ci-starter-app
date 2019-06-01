@@ -1,0 +1,61 @@
+{
+  "description": "The CodeIgniter framework",
+  "name": "codexten/yii-ci-starter-app",
+  "type": "project",
+  "homepage": "https://codeigniter.com",
+  "license": "MIT",
+  "support": {
+    "forum": "http://forum.codeigniter.com/",
+    "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+    "slack": "https://codeigniterchat.slack.com",
+    "source": "https://github.com/bcit-ci/CodeIgniter"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "codeigniter/framework": "^3.1.10",
+    "codexten/yii-app-console": "^2.0.0"
+  },
+  "require-dev": {
+    "codexten/yii-dev": "~2.0"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "config": {
+    "process-timeout": 0,
+    "secure-http": false,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "./vendor/bin/hidev ext",
+      "composer du --verbose",
+      "chown -R www-data:www-data ."
+    ],
+    "post-update-cmd": [
+      "composer install"
+    ]
+  },
+  "extra": {
+    "sconfig-plugin": {
+      "params": "config/params.php",
+      "core": "config/core.php",
+      "console": "config/console.php",
+      "admin": [
+        "$adminlte2",
+        "$moduleAuth",
+        "config/admin.php"
+      ],
+      "site": [
+        "$bootswatch",
+        "$moduleAuth",
+        "config/site.php"
+      ]
+    }
+  }
+}
