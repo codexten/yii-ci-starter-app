@@ -9,7 +9,7 @@ if (YII_ENV === 'dev') {
     hiqdev\composer\config\Builder::rebuild();
 }
 
-$config = require Builder::path('console');
+$config = require Builder::path('web');
 
 $app = new Application($config);
 
